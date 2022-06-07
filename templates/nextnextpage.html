@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block substance %}
+<div class="content">
+    <h2>ようこそ!!!!!<br>{{ user["username"]}}のページへ</h2>
+    <p>
+        <a href="{{ url_for("logout")}}">ログアウト</a>
+    </p>
+</div>
+{% endblock %}
