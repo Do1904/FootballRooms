@@ -6,6 +6,7 @@ from app.configs import Config
 from app.utilities.session import Session
 from app.utilities.check_login import check_login
 from app.models.test import TestModel
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 templates = Jinja2Templates(directory="/app/templates")
