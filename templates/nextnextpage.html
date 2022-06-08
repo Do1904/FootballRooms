@@ -1,9 +1,40 @@
 {% extends "base.html" %}
 {% block substance %}
+<div class="welcome">
+    <h4>FOOTBALL ROOMS</h4>
+    <!-- ホームに戻るボタンにするかも -->
+</div>
 <div class="content">
-    <h2>ようこそ!!!!!<br>{{ user["username"]}}のページへ</h2>
+    <h2><br>{{ user["username"]}}さんのプロフィール</h2>
+    <form action="{{ url_for("profile") }}" method="post">
+        <div>
+            <label for="username">Username: </label>
+            <input id="username" type="text" name="username" />
+        </div>
+        <div>
+            <label for="nation">Your Nation: </label>
+            <input id="nation" type="text" name="nation" />
+        </div>
+        <div>
+            <label for="favClub">Your Club: </label>
+            <input id="favClub" type="text" name="favClub" />
+        </div>
+        <div>
+            <label for="favLeague">Your League: </label>
+            <input id="favLeague" type="text" name="favLeague" />
+        </div>
+        <div>
+            <label for="favPlayer">Your Player: </label>
+            <input id="favPlayer" type="text" name="favPlayer" />
+        </div>
+        <br>
+        <div>
+            <button type="submit">更新</button>
+        </div>
+    </form>
     <p>
         <a href="{{ url_for("logout")}}">ログアウト</a>
     </p>
 </div>
 {% endblock %}
+

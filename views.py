@@ -63,6 +63,9 @@ def netxtpage(request: Request, session_id=Cookie(default=None)):
         "user": user
     })
 
+# @app.get("/profile")
+
+
 @app.get("/nextnextpage")
 # check_loginデコレータをつけるとログインしていないユーザをリダイレクトできる
 @check_login
@@ -81,3 +84,12 @@ def logout(session_id=Cookie(default=None)):
     response = RedirectResponse(url="/")
     response.delete_cookie("session_id")
     return response
+
+#  @app.post("/profile")
+# def signup(request: Request, username: str = Form(...), nation: str = Form(...), favClub: str = Form(...), favLeague: str = Form(...), favPlayer: str = Form(...)):  
+#     test_model = TestModel(config)
+#     test_model.signup(username, password)
+#     return templates.TemplateResponse("nextpage.html", {
+#         "request": request,
+#         "userdata": userdata
+#     })
