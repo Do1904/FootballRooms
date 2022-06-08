@@ -4,28 +4,33 @@
     {% if error %}
     <p style="color: red">{{ error }}</p>
     {% endif %}
-    <h2>ログイン</h2>
+    <h2>Sign In</h2>
+    <p>既にアカウントをお持ちの方はこちら</p>
     <form action="{{ url_for("login") }}" method="post">
         <div>
-            <label for="username">ユーザ名</label>
+            <label for="username">Username: </label>
             <input id="username" type="text" name="username" />
         </div>
         <div>
-            <label for="password">パスワード</label>
+            <label for="password">Password: </label>
             <input id="password" type="password" name="password" />
         </div>
+        <br>
         <div>
-            <button type="submit">送信</button>
+            <button type="submit">Sign In!</button>
         </div>
     </form>
+    <br>
     <hr>
+    <br>
     <h2>
-        ユーザ登録
+        Sign Up
     </h2>
+    <p>新規登録はこちら</p>
     <form action="{{url_for("signup") }}" method="post">
-        <label for="username">ユーザ名</label>
+        <label for="username">Username: </label>
         <input id="username" type="text" name="username"><br>
-        <label for="password">パスワード</label>
+        <label for="password">Password: </label>
         <input id="password" type="password" name="password"><br>
         <br>
         <button type="submit">登録</button>

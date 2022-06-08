@@ -13,6 +13,8 @@ templates = Jinja2Templates(directory="/app/templates")
 config = Config()
 session = Session(config)
 
+app.mount("/app/static", StaticFiles(directory="app/static"), name="static")
+
 
 @app.get("/")
 def index(request: Request):
