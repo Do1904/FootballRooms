@@ -93,3 +93,12 @@ def logout(session_id=Cookie(default=None)):
 #         "request": request,
 #         "userdata": userdata
 #     })
+
+# @app.post("/your_club")
+# async def your_club(request: Request, favClub: str = Form(...)):
+#     test_model=TestModel(config)
+#     your_club = test_model.fetch_yourclub_by_name(favClub)
+#     return templates.TemplateResponse("nextnextpage.html", {
+#         "request": request,
+#         "your_club": your_club
+#     })

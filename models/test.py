@@ -43,3 +43,7 @@ class TestModel(AbstractModel):
     
     def hash_password(self, password: str):
         return sha256(password.encode()).hexdigest()
+
+    # def fetch_yourclub_by_name(self, favClub):
+    #     sql = "SELECT * FROM clubs  WHERE clubs=%s"
+    #     return self.fetch_one(sql, favClub)
